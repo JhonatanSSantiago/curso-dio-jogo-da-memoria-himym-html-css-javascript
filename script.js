@@ -1,13 +1,15 @@
 function inicio() {
-    $("#start").hide();
+    $(".start").hide();
     $(".card").show();
 
     const cards = document.querySelectorAll('.card');
+    let cont = cards.length;
     let hasFlipperCard = false; //verifica se tem cartao selecionado
     let firstCard, secondCard;
     let lockBoard = false;
 
     function flipCard() { //revela imagem da carta
+        
         if (lockBoard) return; //travar tabuleiro
         if (this === firstCard) return; //duplo clique na mesma carta
         this.classList.add('flip');
@@ -23,6 +25,8 @@ function inicio() {
 
     function checkForMath() { //verifica se cartas sao identicas
         if(firstCard.dataset.card === secondCard.dataset.card){
+            cont -=2;
+            console.log(cont);
             disableCards(); // chama metodo desativar cartas
             return;
         }
@@ -41,10 +45,14 @@ function inicio() {
             firstCard.classList.remove('flip');
             secondCard.classList.remove('flip');
             resetBoard();
-        }, 1500);
+        }, 1500);       
     } 
 
     function resetBoard() { //renicia tabuleiro
+        if(cont <= 0){
+            alert("Parabens!! Click em Ok para Jogar Novamente");
+            window.location.reload();
+        } 
         [hasFlipperCard, lockBoard] = [false, false];
         [firstCard, secondCard] = [null, null];
     }
@@ -56,8 +64,8 @@ function inicio() {
         })
     })();
 
+
     cards.forEach((card) => { //define carta clicada
         card.addEventListener('click', flipCard)
     });
-
 }

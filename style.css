@@ -1,3 +1,9 @@
+:root {
+    --button-linear: linear-gradient(120deg, #4169E1, #00FFFF, #4169E1);
+    --transition-linear: .3s ease-in-out;
+    --width-full: 20%;
+    --white: #fff;
+}
 * {
     padding: 0;
     margin: 0;
@@ -5,7 +11,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,14 +19,30 @@ body {
     background-color: rgb(54, 54, 66);
 }
 
-.botao {
-    padding: 20px;
-    margin: 40%;
+.start{
+    padding: 10px;
+    margin: 5%;
+    height: 48px;
+    width: var(--width-full);
+    outline: none;
+    background: var(--button-linear);
+    background-size: 200%;
+    margin-bottom: 32px;
+    font-size: 14px;
+    font-weight: bold;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.start:hover {
+    background-position: right; 
 }
 
 .memory-game {
-    height: 640px;
-    width: 640px;
+    height: 600px;
+    width: 600px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;

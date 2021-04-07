@@ -7,7 +7,15 @@
 body {
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: rgb(54, 54, 66);
+}
+
+.botao {
+    padding: 20px;
+    margin: 40%;
 }
 
 .memory-game {
@@ -18,6 +26,7 @@ body {
     flex-wrap: wrap;
     perspective: 1000px;
 }
+
 
 .card {
     height: calc( 33.333% - 10px);

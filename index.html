@@ -8,56 +8,59 @@
     <title>How I Met Your Mother - Memory Game</title>
 </head>
 <body>
-    <main class="memory-game">
-        <div class="card" data-card="Ted">
+    <button id="start" type="button" class="botao" onclick="inicio()">Play Game</button>    
+    <span class="memory-game">
+        <div class="card" data-card="Ted" hidden >
             <img src="img/Ted.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div>
-        <div class="card" data-card="Lily">
+        <div class="card" data-card="Lily" hidden>
             <img src="img/Lily.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div> 
-        <div class="card" data-card="Barney">
+        <div class="card" data-card="Barney" hidden>
             <img src="img/Barney.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div> 
-        <div class="card" data-card="Barney">
+        <div class="card" data-card="Barney" hidden>
             <img src="img/Barney.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div> 
-        <div class="card" data-card="Tracy">
+        <div class="card" data-card="Tracy" hidden>
             <img src="img/Tracy.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div> 
-        <div class="card" data-card="Marshal">
+        <div class="card" data-card="Marshal" hidden>
             <img src="img/Marshall.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div> 
-        <div class="card" data-card="Robin">
+        <div class="card" data-card="Robin" hidden>
             <img src="img/Robin.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div> 
-        <div class="card" data-card="Ted">
+        <div class="card" data-card="Ted" hidden>
             <img src="img/Ted.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div>   
-        <div class="card" data-card="Marshal">
+        <div class="card" data-card="Marshal" hidden>
             <img src="img/Marshall.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div> 
-        <div class="card" data-card="Lily">
+        <div class="card" data-card="Lily" hidden>
             <img src="img/Lily.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div> 
-        <div class="card" data-card="Tracy">
+        <div class="card" data-card="Tracy" hidden>
             <img src="img/Tracy.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
         </div>  
-        <div class="card" data-card="Robin">
+        <div class="card" data-card="Robin" hidden>
             <img src="img/Robin.jpg" alt="face da carta" class="card-front">
             <img src="img/Fundo.jpg" alt="verso da carta" class="card-back">
-        </div>        
-    </main>
+        </div>         
+    </span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
